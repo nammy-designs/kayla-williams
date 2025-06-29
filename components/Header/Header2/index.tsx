@@ -77,7 +77,7 @@ const Header: FC<HeaderPropTypes> = (props) => {
                         <li className="flex-1" key={index}>
                           <div className="relative h-full m-2 p-3.5 shadow-[0_5px_5px_rgba(0,0,0,0.3)] transition-all group">
                             <span
-                              className={`bg-[url(${bannerImageUrl})] absolute top-0 left-0 right-0 bottom-0 bg-cover bg-fixed bg-[position:center_top] group-hover:bottom-[-5px] group-hover:top-[-5px] group-hover:left-[-10px] group-hover:right-[-10px] transition-all`}
+                              className={`bg-[url(/images/model2.jpg)] absolute top-0 left-0 right-0 bottom-0 bg-cover bg-fixed bg-[position:center_top] group-hover:bottom-[-5px] group-hover:top-[-5px] group-hover:left-[-10px] group-hover:right-[-10px] transition-all`}
                               aria-hidden="true"
                             />
                             <span className="absolute transition-all top-0 left-0 right-0 bottom-0 z-20 bg-[rgba(0,0,0,0.30)] group-hover:bottom-[-5px] group-hover:top-[-5px] group-hover:left-[-10px] group-hover:right-[-10px] group-hover:bg-[rgba(0,0,0,0.40)]" />
