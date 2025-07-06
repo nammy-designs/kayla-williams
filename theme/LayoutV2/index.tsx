@@ -28,7 +28,9 @@ const Layout: FC<LayoutPropTypes> = (props): ReactElement => {
   return (
     <div id="page" className={`${fontConfig} max-w-[1920px] mx-auto`}>
       <Header bannerImageUrl={bannerImageUrl} />
-      <main>{children}</main>
+      <main className="container/@main-page-container main-page-container">
+        {children}
+      </main>
       <Footer />
     </div>
   );

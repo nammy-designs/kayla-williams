@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { FC } from "react";
 
 const Introduction: FC = () => {
@@ -9,7 +10,7 @@ const Introduction: FC = () => {
       id="introduction"
     >
       <div className="col-span-12 lg:col-span-5 xl:col-span-4 p-6 md:p-10 lg:p-14 xl:p-16">
-        <p className="relative capitalize text-center text-fluid-h6 font-medium after:content[''] after:absolute after:top-[calc(100%+10px)] after:bg-[url(/images/divider.png)] after:h-11 after:w-full after:bg-no-repeat after:bg after:left-0 mt-5 mb-20 after:bg-center after-bg-size-custom font-libre-baskerville">
+        <p className="relative capitalize text-center text-fluid-h6 font-medium after:content[''] after:absolute after:top-[calc(100%+10px)] after:bg-[url(/images/divider.png)] after:h-11 after:w-full after:bg-no-repeat after:bg after:left-0 mt-5 mb-20 after:bg-center after-bg-size-custom font-libre-baskerville after:mix-blend-multiply">
           introduction
         </p>
         <p className="text-fluid-micro-lg leading-fluid-body-4">
@@ -22,6 +23,12 @@ const Introduction: FC = () => {
           will hold dearly. I look forward to creating life-long memories of
           pleasure and happiness
         </p>
+        <Link
+          href="/investment"
+          className="transition-all duration-300 uppercase mt-8 inline-block text-center border w-full py-5 text-fluid-base hover:bg-black hover:text-white font-medium tracking-wide"
+        >
+          date me
+        </Link>
       </div>
       <div className="col-span-12 lg:col-span-7 xl:col-span-8">
         <div className="relative before:content-[''] before:block before:pb-[56.25%] lg:before:pb-[66.66%]">

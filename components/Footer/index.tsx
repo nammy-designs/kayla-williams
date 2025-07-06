@@ -1,83 +1,53 @@
-import React from "react";
-
-const WaveAnimation = () => {
-  return (
-    <svg
-      width="100%"
-      height="auto"
-      viewBox="0 0 1440 400"
-      xmlns="http://www.w3.org/2000/svg"
-      className="transition duration-500 ease-in-out delay-150"
-    >
-      <style>
-        {`
-          .path-0 {
-            animation: pathAnim-0 4s linear infinite;
-          }
-
-          @keyframes pathAnim-0 {
-            0% {
-              d: path("M 0,400 L 0,150 C 82.07142857142858,129.64285714285714 164.14285714285717,109.28571428571429 302,98 C 439.85714285714283,86.71428571428571 633.5,84.5 763,115 C 892.5,145.5 957.8571428571429,208.7142857142857 1060,220 C 1162.142857142857,231.2857142857143 1301.0714285714284,190.64285714285717 1440,150 L 1440,400 L 0,400 Z");
-            }
-            25% {
-              d: path("M 0,400 L 0,150 C 146.5,164.46428571428572 293,178.92857142857142 423,178 C 553,177.07142857142858 666.5,160.75 764,158 C 861.5,155.25 943,166.07142857142858 1053,167 C 1163,167.92857142857142 1301.5,158.96428571428572 1440,150 L 1440,400 L 0,400 Z");
-            }
-            50% {
-              d: path("M 0,400 L 0,150 C 102.60714285714286,177.75 205.21428571428572,205.5 328,192 C 450.7857142857143,178.5 593.75,123.74999999999999 713,113 C 832.25,102.25000000000001 927.7857142857142,135.5 1045,149 C 1162.2142857142858,162.5 1301.107142857143,156.25 1440,150 L 1440,400 L 0,400 Z");
-            }
-            75% {
-              d: path("M 0,400 L 0,150 C 149.57142857142856,157.21428571428572 299.1428571428571,164.42857142857142 413,170 C 526.8571428571429,175.57142857142858 605,179.5 720,172 C 835,164.5 986.8571428571429,145.57142857142858 1113,140 C 1239.142857142857,134.42857142857142 1339.5714285714284,142.21428571428572 1440,150 L 1440,400 L 0,400 Z");
-            }
-            100% {
-              d: path("M 0,400 L 0,150 C 82.07142857142858,129.64285714285714 164.14285714285717,109.28571428571429 302,98 C 439.85714285714283,86.71428571428571 633.5,84.5 763,115 C 892.5,145.5 957.8571428571429,208.7142857142857 1060,220 C 1162.142857142857,231.2857142857143 1301.0714285714284,190.64285714285717 1440,150 L 1440,400 L 0,400 Z");
-            }
-          }
-        `}
-      </style>
-
-      <defs>
-        <pattern
-          id="imagePattern"
-          patternUnits="userSpaceOnUse"
-          width="100%"
-          height="100%"
-        >
-          <image
-            href="/images/background3.jpeg"
-            x="0"
-            y="0"
-            width="100%"
-            height="100%"
-            preserveAspectRatio="xMidYMid slice"
-          />
-        </pattern>
-      </defs>
-
-      <path
-        d="M 0,400 L 0,150 C 82.07142857142858,129.64285714285714 164.14285714285717,109.28571428571429 302,98 C 439.85714285714283,86.71428571428571 633.5,84.5 763,115 C 892.5,145.5 957.8571428571429,208.7142857142857 1060,220 C 1162.142857142857,231.2857142857143 1301.0714285714284,190.64285714285717 1440,150 L 1440,400 L 0,400 Z"
-        stroke="none"
-        strokeWidth="0"
-        fill="url(#imagePattern)"
-        fillOpacity="1"
-        className="transition-all duration-300 ease-in-out delay-150 path-0"
-      />
-    </svg>
-  );
-};
+import { navigationData } from "@/data/navigation";
+import React, { memo } from "react";
+import Icon from "../Icon";
 
 const Footer = () => {
   return (
-    <div className="relative w-full overflow-hidden bg-white text-white border-0 leading-none">
-      <WaveAnimation />
-
+    <footer className="w-full text-white bg-black relative overflow-hidden px-container-padding sm:px-container-padding-sm md:px-container-padding-md lg:px-container-padding-lg 2xl:px-container-padding-xl 3xl:px-container-padding-xxl">
       {/* Footer */}
-      <div className="text-center py-3 bg-black flex justify-between items-center">
-        <h1 className="text-fluid-micro-lg italic mb-2 tracking-wider font-libre-baskerville flex-1 font-semibold">
-          KYLA WILLIAMS
-        </h1>
+      <div className="text-center flex flex-col justify-between items-center footer-wrapper relative overflow-hidden min-h-72 before:content-[''] before:bg-[url(/images/background3.jpeg)] before:bg-cover before:bg-center before:bg-no-repeat before:absolute before:inset-0 before:opacity-30 ">
+        <div className="relative z-[1] flex items-center justify-center flex-1 flex-col gap-8">
+          <p className="text-fluid-body-5 italic tracking-wider font-libre-baskerville font-semibold uppercase">
+            {navigationData.title}
+          </p>
+          <div className="social-media-container flex gap-6">
+            <a
+              href="https://www.instagram.com/Kayla_w012"
+              aria-label="instagram"
+              className="inline-flex bg-white p-2 rounded-full"
+              target="_blank"
+            >
+              <Icon icon="instagram" className="stroke-white" size={32} />
+            </a>
+            <a
+              href="https://www.x.com/KaylaWilliamsGF"
+              aria-label="twitter"
+              className="inline-flex bg-white p-2 rounded-full"
+              target="_blank"
+            >
+              <Icon icon="twitter" className="stroke-white" size={32} />
+            </a>
+          </div>
+          <div>
+            <a
+              href="https://www.eurogirlsescort.com/"
+              className="inline-flex text-fluid-base"
+              style={{ wordBreak: "break-word" }}
+            >
+              https://www.eurogirlsescort.com/
+            </a>
+          </div>
+        </div>
       </div>
-    </div>
+      <div className="copyright-container text-center">
+        <p className="py-4 text-fluid-base">
+          Copyright © {new Date().getFullYear()} KaylaWilliams - All Rights
+          Reserved.
+        </p>
+      </div>
+    </footer>
   );
 };
 
-export default Footer;
+export default memo(Footer);

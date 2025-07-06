@@ -5,6 +5,24 @@
   --foreground: #171717;
   --white: #ffffff;
   --black: #000000;
+  --off-white: #efefef;
+  --black-shade: #947ea7;
+
+  /* section paddings */
+  --section-padding-base: 8px;
+  --section-padding-sm: 1rem; /* 16px */
+  --section-padding-md: 2rem; /* 32px */
+  --section-padding-lg: 3rem; /* 48px */
+  --section-padding-2xl: 4.5rem; /* 72px */
+  --section-padding-3xl: 6rem; /* 96px */
+
+  /* container paddings */
+  --container-padding: 35px;
+  --container-padding-sm: 45px;
+  --container-padding-md: 56px;
+  --container-padding-lg: 72px;
+  --container-padding-xl: 72px;
+  --container-padding-xxl: 96px;
 }
 
 @theme {
@@ -54,14 +72,31 @@
   --spacing-fluid-body-2-guided: 2rem; /* 32px */
   --spacing-fluid-body-5-guided: 1.625rem; /* 26px */
   --spacing-fluid-micro-guided: 1.5rem; /* 24px */
-
-  /* colors */
-  --color-dark-grey: #1a1a1a;
 }
 
 @theme inline {
   --font-montserrat: var(--font-montserrat);
   --font-libre-baskerville: var(--font-libre-baskerville);
+
+  /* section spacings */
+  --spacing-section-padding-base: var(--section-padding-base); /* 8px */
+  --spacing-section-padding-sm: var(--section-padding-sm); /* 16px */
+  --spacing-section-padding-md: var(--section-padding-md); /* 32px */
+  --spacing-section-padding-lg: var(--section-padding-lg); /* 48px */
+  --spacing-section-padding-2xl: var(--section-padding-2xl); /* 72px */
+  --spacing-section-padding-3xl: var(--section-padding-3xl); /* 96px */
+
+  /* container paddings */
+  --spacing-container-padding: var(--container-padding);
+  --spacing-container-padding-sm: var(--container-padding-sm);
+  --spacing-container-padding-md: var(--container-padding-md);
+  --spacing-container-padding-lg: var(--container-padding-lg);
+  --spacing-container-padding-xl: var(--container-padding-xl);
+  --spacing-container-padding-xxl: var(--container-padding-xxl);
+
+  /* colors */
+  --color-off-white: var(--off-white);
+  --color-black-shade: var(--black-shade);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -76,8 +111,14 @@ body {
   box-sizing: border-box;
   color: var(--background);
   position: relative;
+  background-image: url(/images/bg.jpg);
+  background-size: cover;
 }
 
 .after-bg-size-custom::after {
   background-size: 100px auto;
+}
+
+* {
+  box-sizing: border-box;
 }
