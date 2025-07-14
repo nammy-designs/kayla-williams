@@ -15,7 +15,7 @@ const Declaimer = () => {
           </p>
         </div>
         <Link
-          href={"/introduction"}
+          href={"/investment"}
           className="transition-all duration-300 border border-amber-50 mt-fluid-base hover:bg-white hover:text-black"
         >
           <p className="text-fluid-body-5 leading-fluid-body-5 py-3 px-12">

@@ -1,5 +1,5 @@
 import TransparentContainer from "@/components/TransparentContainer";
-import Layout from "@/theme/LayoutV2";
+import Layout from "@/theme/Layout";
 import Head from "next/head";
 import { ReactElement } from "react";
 
@@ -12,9 +12,8 @@ export default function Page() {
       {/* render vous */}
       <section
         title="Rendez-vous"
-        className="relative container/@investment w-full mx-auto px-container-padding sm:px-container-padding-sm md:px-container-padding-md lg:px-container-padding-lg 2xl:px-container-padding-xl 3xl:px-container-padding-xxl     before:content-[''] before:absolute before:inset-0 before:bg-[url('/images/model4.jpeg')] before:bg-fixed min-h-screen before:bg-cover py-section-padding-md md:py-section-padding-lg 2xl:py-section-padding-2xl"
+        className="relative container/@investment w-full mx-auto before:content-[''] before:absolute before:inset-0 before:bg-[url('/images/model4.jpg')] before:bg-fixed min-h-screen before:bg-cover p-container-padding sm:p-container-padding-sm md:p-container-padding-md lg:p-container-padding-lg 2xl:p-container-padding-xl 3xl:p-container-padding-xxl"
       >
-        <div className="bg-black opacity-30 z-[2] absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,1)_0%,rgba(64,1,1,1)_100%)]" />
         <div className="content-container relative z-[3]">
           <h2 className="text-fluid-h5 uppercase tracking-widest font-libre-baskerville font-semibold text-white pb-section-padding-sm md:pb-section-padding-md 2xl:pb-section-padding-lg">
             Rendez-vous
@@ -37,7 +36,7 @@ export default function Page() {
             </div>
           </div>
           <div className="details grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-8 2xl:gap-10 text-white">
-            <TransparentContainer bgUrl="">
+            <TransparentContainer bgUrl="/images/bg3.jpeg">
               <div className="panel p-4">
                 <div className="panel-header">
                   <p className="uppercase text-fluid-body-4 font-libre-baskerville">
@@ -78,7 +77,7 @@ export default function Page() {
                 </div>
               </div>
             </TransparentContainer>
-            <TransparentContainer bgUrl="">
+            <TransparentContainer bgUrl="/images/bg3.jpeg">
               <div className="panel p-4">
                 <div className="panel-header">
                   <p className="uppercase text-fluid-body-4 font-libre-baskerville">
@@ -134,9 +133,8 @@ export default function Page() {
       {/* my submission */}
       <section
         title="my submission"
-        className="relative container/@investment w-full mx-auto px-container-padding sm:px-container-padding-sm md:px-container-padding-md lg:px-container-padding-lg 2xl:px-container-padding-xl 3xl:px-container-padding-xxl     before:content-[''] before:absolute before:inset-0 before:bg-[url('/images/km/1.jpeg')] before:bg-fixed before:bg-cover py-section-padding-md md:py-section-padding-lg 2xl:py-section-padding-2xl"
+        className="relative container/@investment w-full mx-auto before:content-[''] before:absolute before:inset-0 before:bg-[url('/images/km/1.jpeg')] before:bg-fixed before:bg-cover p-container-padding sm:p-container-padding-sm md:p-container-padding-md lg:p-container-padding-lg 2xl:p-container-padding-xl 3xl:p-container-padding-xxl"
       >
-        <div className="bg-black opacity-30 z-[2] absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,1)_0%,rgba(64,1,1,1)_100%)]" />
         <div className="content-container relative z-[3]">
           {/* submission */}
           <h2 className="text-fluid-h5 uppercase tracking-widest font-libre-baskerville font-semibold text-white pb-section-padding-sm md:pb-section-padding-md 2xl:pb-section-padding-lg">
@@ -165,9 +163,8 @@ export default function Page() {
       {/* fetish encounters */}
       <section
         title="fetish encounters"
-        className="relative container/@investment w-full mx-auto px-container-padding sm:px-container-padding-sm md:px-container-padding-md lg:px-container-padding-lg 2xl:px-container-padding-xl 3xl:px-container-padding-xxl     before:content-[''] before:absolute before:inset-0 before:bg-[url('/images/model5.jpeg')] before:bg-fixed before:bg-cover py-section-padding-md md:py-section-padding-lg 2xl:py-section-padding-2xl"
+        className="relative container/@investment w-full mx-auto before:content-[''] before:absolute before:inset-0 before:bg-[url('/images/model5.jpg')] before:bg-fixed before:bg-cover p-container-padding sm:p-container-padding-sm md:p-container-padding-md lg:p-container-padding-lg 2xl:p-container-padding-xl 3xl:p-container-padding-xxl"
       >
-        <div className="bg-black opacity-30 z-[2] absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,1)_0%,rgba(64,1,1,1)_100%)]" />
         <div className="content-container relative z-[3]">
           {/* submission */}
           <h2 className="text-fluid-h5 uppercase tracking-widest font-libre-baskerville font-semibold text-white pb-section-padding-sm md:pb-section-padding-md 2xl:pb-section-padding-lg">
@@ -230,9 +227,8 @@ export default function Page() {
       {/* information block */}
       <section
         title="please note"
-        className="relative container/@investment w-full mx-auto px-container-padding sm:px-container-padding-sm md:px-container-padding-md lg:px-container-padding-lg 2xl:px-container-padding-xl 3xl:px-container-padding-xxl before:content-[''] before:absolute before:inset-0 before:bg-fixed before:bg-cover before:bg-[url('/images/model6.jpeg')] py-section-padding-md md:py-section-padding-lg 2xl:py-section-padding-2xl"
+        className="relative container/@investment w-full mx-auto p-container-padding sm:p-container-padding-sm md:p-container-padding-md lg:p-container-padding-lg 2xl:p-container-padding-xl 3xl:p-container-padding-xxl before:content-[''] before:absolute before:inset-0 before:bg-fixed before:bg-cover before:bg-[url('/images/model6.jpg')]"
       >
-        <div className="bg-black opacity-30 z-[2] absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,1)_10%,rgba(64,1,1,1)_100%)]" />
         <div className="content-container relative z-[3]">
           {/* submission */}
           <h2 className="text-fluid-h5 uppercase tracking-widest font-libre-baskerville font-semibold text-white text-center pb-section-padding-sm md:pb-section-padding-md 2xl:pb-section-padding-lg">
@@ -289,5 +285,5 @@ I like to plan ahead as I'm a University student with a busy life. Booking in ad
 }
 
 Page.getLayout = function getLayout(page: ReactElement) {
-  return <Layout bannerImageUrl="/images/model2.jpg">{page}</Layout>;
+  return <Layout>{page}</Layout>;
 };

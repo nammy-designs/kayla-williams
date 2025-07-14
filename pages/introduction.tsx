@@ -1,4 +1,4 @@
-import Layout from "@/theme/Layout";
+import Layout from "@/theme/LayoutV2";
 import Head from "next/head";
 import { ReactElement } from "react";
 import { NextPageWithLayout } from "./_app";
@@ -16,7 +16,7 @@ const Page: NextPageWithLayout = () => {
 };
 
 Page.getLayout = function getLayout(page: ReactElement) {
-  return <Layout>{page}</Layout>;
+  return <Layout bannerImageUrl="/images/model2.jpg">{page}</Layout>;
 };
 
 export default Page;
