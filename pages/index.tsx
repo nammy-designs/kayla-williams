@@ -31,7 +31,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Homepage</title>
+        <title>Homepage | Kayla Williams</title>
       </Head>
       <main className="bg-[url(/images/background1.jpg)] h-lvh bg-center bg-no-repeat">
         <Declaimer />

@@ -7,7 +7,7 @@ export default function Page() {
   return (
     <>
       <Head>
-        <title>book kayla</title>
+        <title>spoil me | Kayla Williams</title>
       </Head>
 
       {/* spoil me */}

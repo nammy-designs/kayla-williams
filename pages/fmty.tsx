@@ -7,7 +7,7 @@ export default function Page() {
   return (
     <>
       <Head>
-        <title>book kayla</title>
+        <title>fmty | Kayla Williams</title>
       </Head>
 
       {/* fmty */}
@@ -36,7 +36,7 @@ export default function Page() {
                 <p>{`I'm very excited for us to escape in to the world of laughter, lust and the most memorable intimate times.`}</p>
               </div>
               <Link
-                href="/investment"
+                href="/investment#packages"
                 className="transition-all duration-300 uppercase inline-block text-center py-5 px-8 text-fluid-base font-medium tracking-wide self-start bg-primary-color text-white border border-primary-color hover:cursor-pointer hover:bg-transparent hover:text-primary-color mt-section-padding-sm"
               >
                 info on rates

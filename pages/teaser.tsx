@@ -20,7 +20,7 @@ const TeaserPage: NextPageWithLayout<TeaserPagePropTypes> = (props) => {
   return (
     <>
       <Head>
-        <title>Teaser</title>
+        <title>teaser | Kayla Williams</title>
       </Head>
       <section title="gallery" className="relative">
         <div className="columns-2 sm:columns-3 md:columns-3 lg:columns-4 3xl:columns-5 gap-4 p-4 relative gallery-container">
@@ -29,7 +29,7 @@ const TeaserPage: NextPageWithLayout<TeaserPagePropTypes> = (props) => {
               <div key={idx} className="image-block relative overflow-hidden">
                 <motion.img
                   src={imageSrd}
-                  className="mb-4 rounded-lg w-full"
+                  className="mb-4 rounded-lg w-full hover:cursor-pointer"
                   alt={`Thumb ${idx}`}
                   layoutId={`image-${idx}`}
                   onClick={() => setSelectedIdx(idx)}

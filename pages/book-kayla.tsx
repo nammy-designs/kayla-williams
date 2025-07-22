@@ -1,5 +1,6 @@
 import Layout from "@/theme/LayoutV2";
 import { useInView, motion } from "framer-motion";
+import Head from "next/head";
 import React, { ReactElement, useRef } from "react";
 
 export default function Page() {
@@ -17,6 +18,9 @@ export default function Page() {
 
   return (
     <>
+      <Head>
+        <title>book kayla | Kayla Williams</title>
+      </Head>
       {/* how to book */}
       <section
         title="how to book"

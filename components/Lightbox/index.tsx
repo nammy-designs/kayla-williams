@@ -61,7 +61,7 @@ const Lightbox: FC<LightboxProps> = ({
               e.stopPropagation();
               onPrev();
             }}
-            className="absolute left-4 top-1/2 -translate-y-1/2 p-2 bg-black bg-opacity-40 rounded-full text-white"
+            className="absolute left-4 top-1/2 -translate-y-1/2 p-2 bg-white bg-opacity-40 rounded-full text-black hover:cursor-pointer"
             aria-label="Previous image"
           >
             &#8592;
@@ -73,7 +73,7 @@ const Lightbox: FC<LightboxProps> = ({
               e.stopPropagation();
               onNext();
             }}
-            className="absolute right-4 top-1/2 -translate-y-1/2 p-2 bg-black bg-opacity-40 rounded-full text-white"
+            className="absolute right-4 top-1/2 -translate-y-1/2 p-2 bg-white bg-opacity-40 rounded-full text-black hover:cursor-pointer"
             aria-label="Next image"
           >
             &#8594;
