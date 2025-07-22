@@ -40,7 +40,7 @@ const CommonHeader: FC<CommonHeaderPropTypes> = (props) => {
           <div className="parallax-container relative text-white left-0 right-0 top-[calc(calc(100vh-110px)/2.5)] bottom-0 uppercase flex flex-col justify-center lg:top-[calc(calc(100vh-110px)/3)]">
             <motion.h1
               style={{ scale }}
-              className="text-fluid-large leading-fluid-large tracking-widest font-bold text-center drop-shadow-2xl font-libre-baskerville"
+              className="text-fluid-large leading-fluid-large tracking-widest font-extrabold text-center drop-shadow-2xl font-lora"
             >
               {navigationData.title}
             </motion.h1>

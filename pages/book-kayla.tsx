@@ -1,183 +1,160 @@
 import Layout from "@/theme/LayoutV2";
-import Head from "next/head";
-import Image from "next/image";
-import React, { ReactElement } from "react";
+import { useInView, motion } from "framer-motion";
+import React, { ReactElement, useRef } from "react";
 
 export default function Page() {
+  const howToBookRef = useRef<HTMLDivElement>(null);
+  const isHowToBookInView = useInView(howToBookRef, {
+    once: true,
+    amount: 0.3,
+  });
+
+  const bookingHoursRef = useRef<HTMLDivElement>(null);
+  const isBookingHoursInView = useInView(bookingHoursRef, {
+    once: true,
+    amount: 0.3,
+  });
+
   return (
     <>
-      <Head>
-        <title>book kayla</title>
-      </Head>
-
       {/* how to book */}
       <section
         title="how to book"
-        className="relative container/@investment w-full mx-auto"
+        className={`container/@how-to-book w-full mx-auto before:content-[''] before:absolute before:inset-0 px-container-padding sm:px-container-padding-sm md:px-container-padding-md lg:px-container-padding-lg 2xl:px-container-padding-xl 3xl:px-container-padding-xxl my-section-padding-md lg:my-section-padding-lg 2xl:my-section-padding-2xl 3xl:my-section-padding-3xl flex items-center justify-center text-center relative`}
       >
-        <div className="content-container relative z-[3]">
-          <div className="details grid grid-cols-1 lg:grid-cols-[50%_50%] ">
-            <div className="image-block relative min-h-96 h-full">
-              <Image
-                src={"/images/km/1.jpeg"}
-                alt="contact kayla williams"
-                fill
-                className="object-cover w-full object-top"
-              />
-            </div>
-            <div className="bg-white p-section-padding-sm md:p-section-padding-md lg:p-section-padding-lg 2xl:p-section-padding-2xl 3xl:p-section-padding-3xl">
-              <h2 className="text-fluid-h5 uppercase tracking-widest font-libre-baskerville font-semibold">
-                how to book
-              </h2>
-              <p className="text-fluid-base">
-                Please read the following guidelines ♥️
-              </p>
-              <div className="list-items-container my-section-padding-sm">
-                <ul className="flex flex-col gap-4">
-                  <li
-                    className="text-fluid-body-5-guided leading-fluid-body-5-guided"
-                    dangerouslySetInnerHTML={{
-                      __html: `<b>Note:</b> Being a low-volume provider as well as the hectic schedule of school, my availability is limited and I prioritize longer dates. `,
-                    }}
-                  />
-
-                  <li
-                    className="text-fluid-body-5-guided leading-fluid-body-5-guided"
-                    dangerouslySetInnerHTML={{
-                      __html: `<b>Cancellation Policy:</b> Any cancellation or reschedule. made within 24 hours of your appointment time will incur a 50% missed-appointment fee. NO-SHOWS will be a 100% appointment fee prior to your next booking. `,
-                    }}
-                  />
-
-                  <li
-                    className="text-fluid-body-5-guided leading-fluid-body-5-guided"
-                    dangerouslySetInnerHTML={{
-                      __html: `<b>When Booking:</b> Any cancellation or reschedule. made within 24 hours of your appointment time will incur a 50% missed-appointment fee. NO-SHOWS will be a 100% appointment fee prior to your next booking. `,
-                    }}
-                  />
-                </ul>
-              </div>
-              <p className="text-fluid-body-5-guided">
-                ***Please plan ahead and prebook our date in advance, this will
-                prevent disappointment and help me organize my schedule and
-                guarantee our time together. Same day bookings are NOT
-                guaranteed and will try to be accommodated.
-              </p>
-              <div className="booking-container py-section-padding-sm md:py-section-padding-md">
-                <h2 className="text-fluid-h5 uppercase tracking-widest font-libre-baskerville font-semibold">
-                  booking hours
-                </h2>
-                <p className="text-fluid-body-5-guided leading-fluid-body-5-guided">
-                  {`I'll try my best to accommodate your schedule if you've
-                  prebooked 3 or more days in advance.`}
-                </p>
-                <p className="text-fluid-body-5-guided leading-fluid-body-5-guided">{`For same day bookings, please read the 'HOW TO BOOK' section above, and my hours for same day bookings are from 9am-6pm based on availability.  
-
-***Time may change when on TOUR***`}</p>
+        <div className="bg-bg-color absolute inset-0 opacity-90" aria-hidden />
+        <motion.div
+          className="content-container relative z-[2] max-w-container-width-2xl"
+          ref={howToBookRef}
+          initial={{ opacity: 0, y: 100 }}
+          animate={
+            isHowToBookInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 100 }
+          }
+          transition={{ duration: 0.8, ease: "easeInOut" }}
+        >
+          <h2 className="text-fluid-h5 uppercase font-lora font-semibold text-primary-color">
+            how to book
+          </h2>
+          <p className="pb-section-padding-sm md:pb-section-padding-md 2xl:pb-section-padding-lg">
+            Please read the following guidelines ♥️
+          </p>
+          <div className="text-primary-color">
+            <div className="card-wrapper relative">
+              <div className="content-container">
+                <p
+                  className="text-fluid-body-5-guided leading-fluid-body-4 font-medium underline-offset-3"
+                  dangerouslySetInnerHTML={{
+                    __html: `As a low-volume provider with a hectic school schedule, my availability is limited, and I prioritize longer dates. Therefore, I kindly ask that you plan ahead and prebook our time together in advance to avoid disappointment and help me manage my schedule effectively. Please note that same-day bookings are not guaranteed, though I will try to accommodate them when possible. I also have a strict cancellation policy: <u>any cancellations or reschedules made within 24 hours of your scheduled appointment will incur a 50% missed-appointment fee.</u> No-shows will be charged the full 100% appointment fee, which must be paid before booking any future appointments. Thank you for your understanding and cooperation.`,
+                  }}
+                />
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
       </section>
 
       {/* contact us */}
       <section
         title="contact us"
-        className="relative container/@investment w-full mx-auto"
+        className="relative container/@how-to-book w-full mx-auto before:content-[''] before:absolute before:inset-0 px-container-padding sm:px-container-padding-sm md:px-container-padding-md lg:px-container-padding-lg 2xl:px-container-padding-xl 3xl:px-container-padding-xxl my-section-padding-md lg:my-section-padding-lg 2xl:my-section-padding-2xl 3xl:my-section-padding-3xl flex flex-col items-center justify-center text-center"
       >
-        <div className="content-container relative z-[3]">
-          <div className="details grid grid-cols-1 lg:grid-cols-[50%_50%] ">
-            <div className="bg-white p-section-padding-sm md:p-section-padding-md lg:p-section-padding-lg 2xl:p-section-padding-2xl 3xl:p-section-padding-3xl">
-              <h2 className="text-fluid-h5 uppercase tracking-widest font-libre-baskerville font-semibold">
-                contact us
-              </h2>
-              <p className="text-fluid-base">
-                For a faster reply, message me at 587-930-2215. Otherwise use
-                the form below.
-              </p>
-              <div className="form-container my-section-padding-sm">
-                <form className="w-full">
-                  <div className="flex flex-wrap -mx-3">
-                    <div className="w-full px-3 mb-6 md:mb-4">
-                      <label
-                        className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-                        htmlFor="grid-first-name"
-                      >
-                        First Name
-                      </label>
+        <div className="bg-bg-color absolute inset-0 opacity-90" aria-hidden />
+        <div className="content-container relative z-[2] max-w-[840px] w-full">
+          <h2 className="text-fluid-h5 uppercase font-lora font-semibold text-primary-color ">
+            {"get in touch"}
+          </h2>
+          <p>{`For a faster reply, message me at 587-930-2215. Otherwise use the form below.`}</p>
+          <div className="spacer-container w-auto grid place-content-center py-4">
+            <div className="h-24 w-0.5 bg-primary-color" />
+          </div>
+          <div className="text-primary-color">
+            <div className="form-wrapper">
+              <form className="form w-full">
+                <div className="grid grid-cols-6 lg:grid-cols-12 w-full gap-4">
+                  <div className="input-group col-span-6 lg:col-span-12">
+                    <label htmlFor="name">
                       <input
-                        className="appearance-none block w-full bg-white  border border-gray-300 rounded py-4 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                        id="grid-first-name"
+                        id="name"
+                        name="name"
                         type="text"
-                        placeholder="Jane"
+                        placeholder="Enter your name"
+                        className="border border-primary-color w-full p-[15px_25px_15px_25px] focus:outline-none"
                       />
-                    </div>
-                    <div className="w-full px-3 mb-6 md:mb-4">
-                      <label
-                        className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-                        htmlFor="grid-last-name"
-                      >
-                        Email
-                      </label>
-                      <input
-                        className="appearance-none block w-full bg-white  border border-gray-300 rounded py-4 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                        id="grid-last-name"
-                        type="text"
-                        placeholder="email@gmail.com"
-                      />
-                    </div>
-
-                    <div className="w-full px-3 mb-6 md:mb-4">
-                      <label
-                        className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-                        htmlFor="grid-city"
-                      >
-                        Phone Number
-                      </label>
-                      <input
-                        className="appearance-none block w-full bg-white  border border-gray-300 rounded py-4 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                        id="grid-city"
-                        type="tel"
-                        placeholder="Phone Number"
-                      />
-                    </div>
-                    <div className="w-full px-3 mb-6 md:mb-4">
-                      <label
-                        className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-                        htmlFor="grid-state"
-                      >
-                        Message
-                      </label>
-                      <div className="relative">
-                        <textarea
-                          rows={8}
-                          cols={6}
-                          className="block appearance-none w-full bg-white  border border-gray-300 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                          id="grid-state"
-                        />
-                      </div>
-                    </div>
+                    </label>
                   </div>
-                  <button
-                    type="submit"
-                    className="transition-all duration-300 uppercase mt-4 inline-block text-center border w-full py-5 text-fluid-base hover:bg-black hover:text-white font-medium tracking-wide hover:cursor-pointer"
-                  >
-                    send message
-                  </button>
-                </form>
-              </div>
+
+                  <div className="input-group col-span-6 lg:col-span-6">
+                    <label htmlFor="email">
+                      <input
+                        id="email"
+                        name="email"
+                        type="text"
+                        placeholder="Enter your email"
+                        className="border border-primary-color w-full p-[15px_25px_15px_25px] focus:outline-none"
+                      />
+                    </label>
+                  </div>
+
+                  <div className="input-group col-span-6 lg:col-span-6">
+                    <label htmlFor="phone-number">
+                      <input
+                        id="phone-number"
+                        name="phone-number"
+                        type="text"
+                        placeholder="Enter your phone number"
+                        className="border border-primary-color w-full p-[15px_25px_15px_25px] focus:outline-none"
+                      />
+                    </label>
+                  </div>
+
+                  <div className="input-group col-span-6 lg:col-span-12">
+                    <label htmlFor="message">
+                      <textarea
+                        id="phone-number"
+                        name="phone-number"
+                        rows={6}
+                        placeholder="Enter your phone number"
+                        className="border border-primary-color w-full p-[15px_25px_15px_25px] focus:outline-none"
+                      />
+                    </label>
+                  </div>
+
+                  <div className="col-span-6 lg:col-span-12">
+                    <button
+                      type="submit"
+                      className="transition-all duration-300 uppercase inline-block text-center py-5 px-8 text-fluid-base font-medium tracking-wide self-start w-full bg-primary-color text-white border border-primary-color hover:cursor-pointer hover:bg-transparent hover:text-primary-color"
+                    >
+                      send message
+                    </button>
+                  </div>
+                </div>
+              </form>
             </div>
-            <div className="image-block hidden lg:block">
-              <div className="relative min-h-96 h-full">
-                <Image
-                  src={"/images/km/2.jpeg"}
-                  alt="contact kayla williams"
-                  fill
-                  className="object-cover w-full h-full object-top"
+          </div>
+        </div>
+        <motion.div
+          className="content-container relative z-[2] my-section-padding-md lg:my-section-padding-lg 2xl:my-section-padding-2xl 3xl:my-section-padding-3xl max-w-[840px] w-full"
+          ref={bookingHoursRef}
+          initial={{ opacity: 0, y: 100 }}
+          animate={isBookingHoursInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.8, ease: "easeInOut" }}
+        >
+          <h2 className="text-fluid-h5 uppercase font-lora font-semibold text-primary-color ">
+            booking hours
+          </h2>
+          <div className="text-primary-color">
+            <div className="card-wrapper relative">
+              <div className="content-container">
+                <p
+                  className="text-fluid-body-5-guided leading-fluid-body-4 font-medium underline-offset-3"
+                  dangerouslySetInnerHTML={{
+                    __html: `I'll try my best to accommodate your schedule if you've prebooked 3 or more days in advance. For same day bookings, please read the 'HOW TO BOOK' section above, and my hours for same day bookings are from 9am-6pm based on availability. ***Time may change when on TOUR***`,
+                  }}
                 />
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
       </section>
     </>
   );

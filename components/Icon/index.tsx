@@ -4,6 +4,13 @@ import { ReactComponent as MenuSvg } from "./icons/menu.svg";
 import { ReactComponent as ArrowSvg } from "./icons/arrow.svg";
 import { ReactComponent as InstagramSvg } from "./icons/instagram.svg";
 import { ReactComponent as TwitterSvg } from "./icons/twitter.svg";
+import { ReactComponent as LoveBagSvg } from "./icons/love-bag.svg";
+import { ReactComponent as DinnerSvg } from "./icons/dinner.svg";
+import { ReactComponent as OverNightSvg } from "./icons/overnight.svg";
+import { ReactComponent as BottleSvg } from "./icons/bottle.svg";
+import { ReactComponent as LoveClockSvg } from "./icons/love-clock.svg";
+import { ReactComponent as HeartFlowerSvg } from "./icons/heart-flower.svg";
+import { ReactComponent as WineSvg } from "./icons/wine.svg";
 
 type IconSvgComponent = React.FunctionComponent<React.SVGProps<SVGSVGElement>>;
 
@@ -12,6 +19,13 @@ type IconType = {
   arrow: IconSvgComponent;
   instagram: IconSvgComponent;
   twitter: IconSvgComponent;
+  loveBag: IconSvgComponent;
+  dinner: IconSvgComponent;
+  overNight: IconSvgComponent;
+  bottle: IconSvgComponent;
+  loveClock: IconSvgComponent;
+  heartFlower: IconSvgComponent;
+  wine: IconSvgComponent;
 };
 
 // Mapping SVG component to Icon
@@ -20,9 +34,27 @@ export const ICON_MAPPING: IconType = {
   arrow: ArrowSvg,
   instagram: InstagramSvg,
   twitter: TwitterSvg,
+  loveBag: LoveBagSvg,
+  dinner: DinnerSvg,
+  overNight: OverNightSvg,
+  bottle: BottleSvg,
+  loveClock: LoveClockSvg,
+  heartFlower: HeartFlowerSvg,
+  wine: WineSvg,
 };
 
-export type IconTypeProp = "menu" | "arrow" | "instagram" | "twitter";
+export type IconTypeProp =
+  | "menu"
+  | "arrow"
+  | "instagram"
+  | "twitter"
+  | "loveBag"
+  | "dinner"
+  | "overNight"
+  | "bottle"
+  | "loveClock"
+  | "heartFlower"
+  | "wine";
 
 export type IconSizes =
   | 8

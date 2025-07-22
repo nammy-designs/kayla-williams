@@ -12,13 +12,13 @@ export default function Page() {
 
       {/* fmty */}
       <section
-        title="spoil me"
+        title="fmty"
         className="relative container/@investment w-full mx-auto"
       >
         <div className="content-container relative z-[3]">
           <div className="details grid grid-cols-1 lg:grid-cols-[40%_60%] ">
             <div className="image-block relative min-h-96 h-full bg-[url(/images/km/3.jpeg)] bg-no-repeat bg-cover bg-center bg-1" />
-            <div className="bg-white p-container-padding md:p-container-padding-md 2xl:p-container-padding-xl 3xl:p-container-padding-xxl">
+            <div className="p-container-padding md:p-container-padding-md 2xl:p-container-padding-xl 3xl:p-container-padding-xxl">
               <h2 className="text-fluid-h5 uppercase tracking-widest font-libre-baskerville font-semibold">
                 fmty
               </h2>
@@ -37,7 +37,7 @@ export default function Page() {
               </div>
               <Link
                 href="/investment"
-                className="transition-all duration-300 uppercase inline-block text-center border py-5 px-8 text-fluid-base hover:bg-black hover:text-white font-medium tracking-wide self-start"
+                className="transition-all duration-300 uppercase inline-block text-center py-5 px-8 text-fluid-base font-medium tracking-wide self-start bg-primary-color text-white border border-primary-color hover:cursor-pointer hover:bg-transparent hover:text-primary-color mt-section-padding-sm"
               >
                 info on rates
               </Link>

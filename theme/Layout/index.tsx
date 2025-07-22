@@ -1,5 +1,5 @@
 import React, { FC, ReactElement, ReactNode } from "react";
-import { Montserrat, Libre_Baskerville } from "next/font/google";
+import { Montserrat, Libre_Baskerville, Lora } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
@@ -15,7 +15,13 @@ const libreBaskerville = Libre_Baskerville({
   subsets: ["latin"],
 });
 
-const fontConfig = `${montserrat.variable} ${libreBaskerville.variable} font-[family-name:var(--font-montserrat)]`;
+const lora = Lora({
+  variable: "--font-lora",
+  weight: ["400", "500", "600", "700"],
+  subsets: ["latin"],
+});
+
+const fontConfig = `${montserrat.variable} ${libreBaskerville.variable} ${lora.variable} font-[family-name:var(--font-montserrat)]`;
 
 type LayoutPropTypes = {
   children: ReactNode;

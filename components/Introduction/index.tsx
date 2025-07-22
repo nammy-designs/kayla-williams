@@ -9,7 +9,7 @@ const Introduction: FC = () => {
       title="introduction"
       id="introduction"
     >
-      <div className="col-span-12 lg:col-span-5 xl:col-span-5 p-container-padding sm:p-container-padding-sm md:p-container-padding-md lg:p-container-padding-lg 2xl:p-container-padding-xl 3xl:p-container-padding-xxl order-2 lg:order-0">
+      <div className="col-span-12 lg:col-span-5 xl:col-span-4 p-container-padding sm:p-container-padding-sm md:p-container-padding-md lg:p-container-padding-lg 2xl:p-container-padding-xl 3xl:p-container-padding-xxl order-2 lg:order-0">
         <p className="relative capitalize text-center text-fluid-h6 font-medium after:content[''] after:absolute after:top-[calc(100%+10px)] after:bg-[url(/images/divider.png)] after:h-11 after:w-full after:bg-no-repeat after:bg after:left-0 mt-5 mb-20 after:bg-center after-bg-size-custom font-libre-baskerville after:mix-blend-multiply">
           introduction
         </p>
@@ -30,10 +30,20 @@ const Introduction: FC = () => {
           date me
         </Link>
       </div>
-      <div className="col-span-12 lg:col-span-7 xl:col-span-7 hidden lg:block">
+      <div className="col-span-12 lg:col-span-7 xl:col-span-4 hidden lg:block">
         <div className="relative before:content-[''] h-full">
           <Image
             src="/images/km/1.jpeg"
+            fill={true}
+            alt="kyla williams"
+            style={{ objectFit: "cover" }}
+          />
+        </div>
+      </div>
+      <div className="col-span-12 lg:col-span-7 xl:col-span-4 hidden lg:block">
+        <div className="relative before:content-[''] h-full">
+          <Image
+            src="/images/km/3.jpeg"
             fill={true}
             alt="kyla williams"
             style={{ objectFit: "cover" }}
