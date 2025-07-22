@@ -15,24 +15,26 @@ export default function Page(
   const { images } = props;
   const imageRef = useRef<HTMLImageElement>(null);
   const contentDivRef = useRef<HTMLDivElement>(null);
+  const gallery1Ref = useRef<HTMLDivElement>(null);
+  const gallery2Ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const image = imageRef.current;
     const contentDiv = contentDivRef.current;
     const mm = gsap.matchMedia();
 
-    gsap.from(".gallery-1", {
+    gsap.to(gallery1Ref.current, {
       x: "-100%",
       scrollTrigger: {
-        trigger: ".gallery-1",
+        trigger: gallery1Ref.current,
         scrub: 0.5,
       },
     });
 
-    gsap.from(".gallery-2", {
-      x: "0",
+    gsap.to(gallery2Ref.current, {
+      x: 0,
       scrollTrigger: {
-        trigger: ".gallery-2",
+        trigger: gallery2Ref.current,
         scrub: 0.5,
       },
     });
@@ -163,7 +165,10 @@ export default function Page(
                 return null;
               }
               return (
-                <div className="col-span-6 h-full" key={idx}>
+                <div
+                  className="col-span-6 md:col-span-3 lg:col-span-6 h-full"
+                  key={idx}
+                >
                   <div className="p-[20px_30px_20px_30px] 2xl:p-[40px_50px_40px_50px] border border-border-color relative h-full group">
                     <div className="transition-all duration-300 ease-in-out group-hover:-translate-y-3">
                       <Icon
@@ -205,7 +210,7 @@ export default function Page(
         className="gallery-wrapper relative py-section-padding-md lg:py-section-padding-lg 2xl:py-section-padding-2xl 3xl:py-section-padding-3xl 2xl:min-h-lvh"
       >
         <div className="gallery-container overflow-hidden">
-          <div className="images flex gallery-1">
+          <div className="images flex gallery-1" ref={gallery1Ref}>
             {images.slice(0, 10).map((imageSrc, idx) => (
               <div
                 className="image-block aspect-square pb-[20%] relative w-[200px] lg:w-[300px] 3xl:w-[450px] shrink-0"
@@ -223,7 +228,10 @@ export default function Page(
         </div>
 
         <div className="gallery-container overflow-hidden">
-          <div className="images flex gallery-2 -translate-x-full">
+          <div
+            className="images flex gallery-2 -translate-x-full"
+            ref={gallery2Ref}
+          >
             {images.slice(10, 19).map((imageSrc, idx) => (
               <div
                 className="image-block aspect-square pb-[20%] relative w-[200px] lg:w-[300px] 3xl:w-[450px] shrink-0"
@@ -267,7 +275,10 @@ export default function Page(
                 return null;
               }
               return (
-                <div className="col-span-6 h-full" key={idx}>
+                <div
+                  className="col-span-6 md:col-span-3 lg:col-span-6 h-full"
+                  key={idx}
+                >
                   <div className="p-[20px_30px_20px_30px] 2xl:p-[40px_50px_40px_50px] border border-border-color relative h-full group">
                     <div className="transition-all duration-300 ease-in-out group-hover:-translate-y-3">
                       <Icon
@@ -319,9 +330,9 @@ export default function Page(
         </div>
       </section>
 
-      {/* fetish encounters */}
+      {/* Beginner's Kink & Fetish package */}
       <section
-        title="fetish encounters"
+        title="Beginner's Kink & Fetish package"
         className="relative container/@pricing w-full mx-auto grid grid-cols-6 lg:grid-cols-12 gap-4 md:gap-8 lg:gap-12 2xl:gap-14 3xl:gap-16 px-container-padding sm:px-container-padding-sm md:px-container-padding-md lg:px-container-padding-lg 3xl:px-0 py-container-padding sm:py-container-padding-sm md:py-container-padding-md lg:py-container-padding-lg 2xl:py-container-padding-xl 3xl:py-container-padding-xxl 3xl:max-w-container-width-2xl"
       >
         <div className="col-span-6 lg:col-span-8">
@@ -335,7 +346,10 @@ export default function Page(
                 return null;
               }
               return (
-                <div className="col-span-6 h-full" key={idx}>
+                <div
+                  className="col-span-6 md:col-span-3 lg:col-span-6 h-full"
+                  key={idx}
+                >
                   <div className="p-[20px_30px_20px_30px] 2xl:p-[40px_50px_40px_50px] border border-border-color relative h-full group">
                     <div className="transition-all duration-300 ease-in-out group-hover:-translate-y-3">
                       <Icon
@@ -373,7 +387,7 @@ export default function Page(
 
       {/* information block */}
       <section
-        title="information block"
+        title="please note"
         className="relative container/@investment w-full mx-auto before:content-[''] before:absolute before:inset-0 before:bg-[url('/images/km/4.jpeg')] before:bg-fixed before:bg-cover px-container-padding sm:px-container-padding-sm md:px-container-padding-md lg:px-container-padding-lg 2xl:px-container-padding-xl 3xl:px-container-padding-xxl py-section-padding-md lg:py-section-padding-lg 2xl:py-section-padding-2xl 3xl:py-section-padding-3xl min-h-lvh flex items-center justify-center text-center"
       >
         <div className="bg-bg-color absolute inset-0 opacity-90" aria-hidden />
