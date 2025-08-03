@@ -52,7 +52,7 @@ const CommonHeader: FC<CommonHeaderPropTypes> = (props) => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.3 }}
-              className=" bg-black h-[calc(100vh-110px)]"
+              className=" bg-black h-dvh"
             >
               <nav className="h-[calc(100vh-150px)]">
                 <ul className="flex flex-col gap-4 justify-between h-[inherit] w-full relative overflow-hidden lg:flex-row lg:gap-0">

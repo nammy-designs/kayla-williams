@@ -169,5 +169,5 @@ export default function Page() {
 }
 
 Page.getLayout = function getLayout(page: ReactElement) {
-  return <Layout bannerImageUrl="/images/model6.jpeg">{page}</Layout>;
+  return <Layout bannerImageUrl="/images/km/25.jpg">{page}</Layout>;
 };

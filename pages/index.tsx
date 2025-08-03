@@ -4,8 +4,11 @@ import Link from "next/link";
 
 const Declaimer = () => {
   return (
-    <section title="consent" className="text-white h-lvh">
-      <Container className="flex flex-col items-center justify-center h-[inherit]">
+    <section
+      title="consent"
+      className="text-white h-lvh flex flex-col w-full justify-center"
+    >
+      <Container className="flex flex-col items-center justify-center bg-black/10 p-5">
         <div className="contentBlock text-center max-w-3xl">
           <p className="text-fluid-body-5 leading-fluid-body-4">
             The content on this site is for mature adult individuals of 25 years
@@ -33,7 +36,7 @@ export default function Home() {
       <Head>
         <title>Homepage | Kayla Williams</title>
       </Head>
-      <main className="bg-[url(/images/background1.jpg)] h-lvh bg-center bg-no-repeat">
+      <main className="bg-[url(/images/km/11.jpg)] h-lvh bg-center bg-no-repeat bg-cover">
         <Declaimer />
       </main>
     </>

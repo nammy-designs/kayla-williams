@@ -56,7 +56,7 @@ const TeaserPage: NextPageWithLayout<TeaserPagePropTypes> = (props) => {
 export default TeaserPage;
 
 TeaserPage.getLayout = function getLayout(page: ReactElement) {
-  return <Layout bannerImageUrl="/images/model3.jpeg">{page}</Layout>;
+  return <Layout bannerImageUrl="/images/km/21.jpg">{page}</Layout>;
 };
 
 export async function getStaticProps() {

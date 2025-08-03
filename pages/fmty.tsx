@@ -17,7 +17,7 @@ export default function Page() {
       >
         <div className="content-container relative z-[3]">
           <div className="details grid grid-cols-1 lg:grid-cols-[40%_60%] ">
-            <div className="image-block relative min-h-96 h-full bg-[url(/images/km/3.jpeg)] bg-no-repeat bg-cover bg-center bg-1" />
+            <div className="image-block relative min-h-96 h-full bg-[url(/images/km/12.jpg)] bg-no-repeat bg-cover bg-top bg-1" />
             <div className="p-container-padding md:p-container-padding-md 2xl:p-container-padding-xl 3xl:p-container-padding-xxl">
               <h2 className="text-fluid-h5 uppercase tracking-widest font-libre-baskerville font-semibold">
                 fmty
@@ -50,5 +50,5 @@ export default function Page() {
 }
 
 Page.getLayout = function getLayout(page: ReactElement) {
-  return <Layout bannerImageUrl="/images/model8.jpeg">{page}</Layout>;
+  return <Layout bannerImageUrl="/images/km/7.jpg">{page}</Layout>;
 };

@@ -92,11 +92,11 @@ export default function Page(
         <div className="px-container-padding sm:px-container-padding-sm md:px-container-padding-md lg:px-container-padding-lg 3xl:px-0 3xl:max-w-container-width-2xl py-section-padding-md lg:py-section-padding-lg 2xl:py-section-padding-2xl 3xl:py-section-padding-3xl grid grid-cols-6 lg:grid-cols-12 gap-8 lg:gap-12 2xl:gap-14 3xl:gap-18 mx-auto">
           <div className="image-block col-span-6 relative">
             <div
-              className="pb-[100%] relative overflow-hidden before:content-[''] before:absolute before:inset-0 before:bg-bg-color before:z-[2] before:opacity-20 image-highlight will-change-transform"
+              className="pb-[100%] relative overflow-hidden before:content-[''] before:absolute before:inset-0 before:bg-bg-color before:z-[2] before:opacity-10 image-highlight will-change-transform"
               ref={imageRef}
             >
               <Image
-                src={"/images/model2.jpg"}
+                src={"/images/km/26.jpg"}
                 alt="kayla williams"
                 fill
                 className="object-cover object-center rounded-2xl mix-blend-multiply"
@@ -225,7 +225,7 @@ export default function Page(
         <div className="col-span-6 lg:col-span-4 max-lg:hidden">
           <div className="pb-[100%] overflow-hidden relative h-full">
             <Image
-              src={"/images/banner1.jpeg"}
+              src={"/images/km/18.jpg"}
               alt="kayla williams"
               fill
               className="object-cover object-center image-highlight rounded-md opacity-80"
@@ -287,7 +287,7 @@ export default function Page(
         <div className="col-span-6 lg:col-span-4 max-lg:hidden">
           <div className="pb-[100%] overflow-hidden relative h-full">
             <Image
-              src={"/images/model3.jpeg"}
+              src={"/images/km/19.jpg"}
               alt="kayla williams"
               fill
               className="object-cover object-center image-highlight rounded-md opacity-80"
@@ -406,7 +406,7 @@ export default function Page(
         <div className="col-span-6 lg:col-span-4 max-lg:hidden">
           <div className="pb-[100%] overflow-hidden relative h-full">
             <Image
-              src={"/images/model6.jpeg"}
+              src={"/images/km/20.jpg"}
               alt="kayla williams"
               fill
               className="object-cover object-center image-highlight rounded-md opacity-80"
