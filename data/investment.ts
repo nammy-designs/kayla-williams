@@ -1,79 +1,60 @@
 const packages = [
   {
-    label: "Dinner and Bliss",
-    subTitle: "Dinner date and relaxation afterwards.",
-    description: "$3000+",
+    label: "A Quick Hello",
+    subTitle:
+      "A fleeting pause - soft, intimate and delicately composed. Just enough to intrigue, enchant...and leave you wanting more",
+    description: "$650.1hr",
     icon: "dinner",
   },
   {
-    label: "Overnight",
-    subTitle: "Dinner and Overnight",
-    description: "$4500+",
+    label: "The Introduction",
+    subTitle: `A brief escape into softness, laughter, and irresistible energy. Perfect for those who crave connection—but prefer to keep it sweet and succinct.`,
+    description: "$1200/2hours",
     icon: "overNight",
   },
   {
-    label: "Longer Engagements",
-    subTitle: "Inquire for longer bookings like weekend or week long bookings",
-    description: "ask me",
+    label: "The Interlude",
+    subTitle: `Unhurried and intimate. Ideal for drinks, deep conversation, and the kind of warmth that lingers just beneath the surface.`,
+    description: "$2200/4 hours",
     icon: "loveBag",
   },
   {
-    label: "Note",
-    subTitle: "Extras are available",
-    description: "",
+    label: "The Soirée",
+    subTitle: `An elegant evening of indulgence—perhaps dinner, a favorite bottle, and the quiet thrill of good company. Designed for those who savor every moment.`,
+    description: "$3200/~6 hours",
     icon: "bottle",
+  },
+  {
+    label: "The Overnight Affair",
+    subTitle: `Our night begins when the world quiets. Time to relax, connect, and fall into a rhythm all our own. Wake up slow, wrapped in ease and laughter soft between us.`,
+    description: "$5000",
+    icon: "loveClock",
   },
 ] as const;
 
-const vipServices = [
+const gentlemanRules = [
   {
-    label: "1hr",
-    subTitle: "",
-    description: "$500",
-    icon: "loveClock",
-  },
-  {
-    label: "2hr",
-    subTitle: "",
-    description: "$1000",
-    icon: "heartFlower",
-  },
-  {
-    label: "4hrs",
-    subTitle: "",
-    description: "$2000",
-    icon: "wine",
-  },
-  {
-    label: "Note",
-    subTitle: "Extras are available",
+    label: "Warmth & Respect",
+    subTitle:
+      "I welcome kindness, genuine interest, and quiet confidence. Your thoughtfulness is the foundation of every meaningful moment we share.",
     description: "",
-    icon: "bottle",
-  },
-] as const;
-
-const fetishServices = [
-  {
-    label: "60 minutes",
-    subTitle: "",
-    description: "$500",
-    icon: "loveClock",
+    icon: "dinner",
   },
   {
-    label: "90 minutes",
-    subTitle: "",
-    description: "$750",
-    icon: "heartFlower",
+    label: "Discretion is Shared Grace",
+    subTitle: `Our time together is private and protected—a space where we both feel safe and valued. Your discretion honors this sacred trust.`,
+    description: "",
+    icon: "overNight",
   },
   {
-    label: "120 minutes",
-    subTitle: "",
-    description: "$1000",
-    icon: "wine",
+    label: "Graceful Timing",
+    subTitle: `Please be mindful of our agreed time. Should life’s unpredictability arise, a simple note is appreciated. Our moments are crafted carefully, and I cherish punctuality.`,
+    description: "",
+    icon: "loveBag",
   },
   {
-    label: "fetish package",
-    subTitle: "Starts at $600/hr and up depending on what fetish is booked",
+    label: "Generosity Beyond Measure",
+    subTitle: `True luxury is in the spirit of giving. Gifts and thoughtful gestures are always welcomed but never expected.`,
     description: "",
     icon: "bottle",
   },
@@ -86,4 +67,4 @@ const investmentsDictionaries = {
   nuru: "NURU- $150",
 } as const;
 
-export { vipServices, investmentsDictionaries, packages, fetishServices };
+export { investmentsDictionaries, packages, gentlemanRules };
