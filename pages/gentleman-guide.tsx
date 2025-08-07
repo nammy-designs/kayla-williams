@@ -12,7 +12,7 @@ export default function Page() {
         <title>{`a gentleman's guide | Kayla Williams`}</title>
       </Head>
 
-      {/* gentleman's guide */}
+      {/* gentleman's guide  */}
       <section
         title="gentleman's guide"
         className="relative container/@pricing w-full mx-auto grid grid-cols-6 lg:grid-cols-12 gap-4 md:gap-8 lg:gap-12 2xl:gap-14 3xl:gap-16 px-container-padding sm:px-container-padding-sm md:px-container-padding-md lg:px-container-padding-lg 3xl:px-0 py-container-padding sm:py-container-padding-sm md:py-container-padding-md lg:py-container-padding-lg 2xl:py-container-padding-xl 3xl:py-container-padding-xxl 3xl:max-w-container-width-2xl"
