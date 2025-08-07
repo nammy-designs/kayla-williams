@@ -7,11 +7,11 @@ import { NextPageWithLayout } from "./_app";
 import Lightbox from "@/components/Lightbox";
 import { motion } from "framer-motion";
 
-type TeaserPagePropTypes = {
+type GalleryPagePropTypes = {
   images: Array<string>;
 };
 
-const TeaserPage: NextPageWithLayout<TeaserPagePropTypes> = (props) => {
+const GalleryPage: NextPageWithLayout<GalleryPagePropTypes> = (props) => {
   const { images } = props;
   const [selectedIdx, setSelectedIdx] = useState<number | null>(null);
   const handlePrev = () => setSelectedIdx((idx) => idx! - 1);
@@ -20,7 +20,7 @@ const TeaserPage: NextPageWithLayout<TeaserPagePropTypes> = (props) => {
   return (
     <>
       <Head>
-        <title>teaser | Kayla Williams</title>
+        <title>gallery | Kayla Williams</title>
       </Head>
       <section title="gallery" className="relative">
         <div className="columns-2 sm:columns-3 md:columns-3 lg:columns-4 3xl:columns-5 gap-4 p-4 relative gallery-container">
@@ -53,9 +53,9 @@ const TeaserPage: NextPageWithLayout<TeaserPagePropTypes> = (props) => {
   );
 };
 
-export default TeaserPage;
+export default GalleryPage;
 
-TeaserPage.getLayout = function getLayout(page: ReactElement) {
+GalleryPage.getLayout = function getLayout(page: ReactElement) {
   return <Layout bannerImageUrl="/images/km/21.jpg">{page}</Layout>;
 };
 

@@ -10,12 +10,6 @@ export default function Page() {
     amount: 0.3,
   });
 
-  const bookingHoursRef = useRef<HTMLDivElement>(null);
-  const isBookingHoursInView = useInView(bookingHoursRef, {
-    once: true,
-    amount: 0.3,
-  });
-
   return (
     <>
       <Head>
@@ -48,7 +42,7 @@ export default function Page() {
                 <p
                   className="text-fluid-body-5-guided leading-fluid-body-4 underline-offset-3"
                   dangerouslySetInnerHTML={{
-                    __html: `As a low-volume provider with a hectic school schedule, my availability is limited, and I prioritize longer dates. Therefore, I kindly ask that you plan ahead and prebook our time together in advance to avoid disappointment and help me manage my schedule effectively. Please note that same-day bookings are not guaranteed, though I will try to accommodate them when possible. I also have a strict cancellation policy: <u>any cancellations or reschedules made within 24 hours of your scheduled appointment will incur a 50% missed-appointment fee.</u> No-shows will be charged the full 100% appointment fee, which must be paid before booking any future appointments. Thank you for your understanding and cooperation.`,
+                    __html: `Every memorable encounter begins with a thoughtful introduction. If you value warmth, elegance, and discretion, I’d love to hear from you. Please share a few details about yourself, your desired experience, and preferred date. I respond personally to respectful, well-considered messages.`,
                   }}
                 />
               </div>
@@ -115,13 +109,38 @@ export default function Page() {
                     </label>
                   </div>
 
+                  <div className="input-group col-span-6 lg:col-span-6">
+                    <label htmlFor="date-time">
+                      <input
+                        type="datetime-local"
+                        id="date-time"
+                        name="date-time"
+                        placeholder="Enter your preferred date time"
+                        className="border border-primary-color w-full p-[15px_25px_15px_25px] focus:outline-none"
+                      />
+                    </label>
+                  </div>
+
+                  <div className="input-group col-span-6 lg:col-span-6">
+                    <label htmlFor="duration">
+                      <input
+                        type="number"
+                        min={1}
+                        id="duration"
+                        name="duration"
+                        placeholder="Enter date duration (hours)"
+                        className="border border-primary-color w-full p-[15px_25px_15px_25px] focus:outline-none"
+                      />
+                    </label>
+                  </div>
+
                   <div className="input-group col-span-6 lg:col-span-12">
                     <label htmlFor="message">
                       <textarea
                         id="message"
                         name="message"
                         rows={6}
-                        placeholder="Enter your message"
+                        placeholder="Tell me about yourself"
                         className="border border-primary-color w-full p-[15px_25px_15px_25px] focus:outline-none"
                       />
                     </label>
@@ -140,29 +159,6 @@ export default function Page() {
             </div>
           </div>
         </div>
-        <motion.div
-          className="content-container relative z-[2] my-section-padding-md lg:my-section-padding-lg 2xl:my-section-padding-2xl 3xl:my-section-padding-3xl max-w-[840px] w-full"
-          ref={bookingHoursRef}
-          initial={{ opacity: 0, y: 100 }}
-          animate={isBookingHoursInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8, ease: "easeInOut" }}
-        >
-          <h2 className="text-fluid-h5 uppercase font-lora font-semibold text-primary-color ">
-            booking hours
-          </h2>
-          <div className="text-primary-color">
-            <div className="card-wrapper relative">
-              <div className="content-container">
-                <p
-                  className="text-fluid-body-5-guided leading-fluid-body-4 underline-offset-3"
-                  dangerouslySetInnerHTML={{
-                    __html: `I'll try my best to accommodate your schedule if you've prebooked 3 or more days in advance. For same day bookings, please read the 'HOW TO BOOK' section above, and my hours for same day bookings are from 9am-6pm based on availability. ***Time may change when on TOUR***`,
-                  }}
-                />
-              </div>
-            </div>
-          </div>
-        </motion.div>
       </section>
     </>
   );
