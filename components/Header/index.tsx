@@ -10,7 +10,7 @@ type CommonHeaderPropTypes = {
 };
 
 const CommonHeader: FC<CommonHeaderPropTypes> = (props) => {
-  const { bannerImageUrl = "/images/background2.jpg" } = props;
+  const { bannerImageUrl = "/images/km/9.jpg" } = props;
   const router = useRouter();
   const [isNavigationOpen, setIsNavigation] = useState(false);
   const { scrollYProgress } = useScroll({
